@@ -22,8 +22,7 @@ public class DmsUser {
     }
 
     // Parameterized constructor
-    public DmsUser(String userId, String password,
-                   String activeStatus, Integer failedAttempts) {
+    public DmsUser(String userId, String password,String activeStatus, Integer failedAttempts) {
         this.userId = userId;
         this.password = password;
         this.activeStatus = activeStatus;

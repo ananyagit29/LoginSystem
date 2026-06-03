@@ -1,10 +1,10 @@
 package com.example.login_backend.config;
 
-import com.example.login_backend.entity.DmsUser;
-import com.example.login_backend.repository.UserRepository;
-
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import com.example.login_backend.entity.DmsUser;
+import com.example.login_backend.repository.UserRepository;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -17,8 +17,8 @@ public class DataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-
-         if (repo.count() == 0) {
+        
+        if (repo.count() == 0) {
 
             DmsUser user1 = new DmsUser(
                     "ananya.parabat@ipca.com",
