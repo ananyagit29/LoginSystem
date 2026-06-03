@@ -38,7 +38,7 @@ public class AuthService {
         }
 
         // FAILED LOGIN
-        int attempts = user.getFailedAttempts();
+        int attempts = user.getFailedAttempts() != null ? user.getFailedAttempts() : 0;
 
         attempts++;
 

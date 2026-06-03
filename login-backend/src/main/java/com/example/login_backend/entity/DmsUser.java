@@ -15,10 +15,12 @@ public class DmsUser {
 
     private String activeStatus;
 
-    private Integer failedAttempts;
+    private Integer failedAttempts = 0;  // Initialize to 0
 
     // Default constructor (required by JPA)
     public DmsUser() {
+        this.failedAttempts = 0;
+        this.activeStatus = "ACTIVE";
     }
 
     // Parameterized constructor
@@ -26,7 +28,7 @@ public class DmsUser {
         this.userId = userId;
         this.password = password;
         this.activeStatus = activeStatus;
-        this.failedAttempts = failedAttempts;
+        this.failedAttempts = failedAttempts != null ? failedAttempts : 0;
     }
 
     // Getters and Setters
